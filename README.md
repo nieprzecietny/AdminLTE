@@ -13,7 +13,7 @@ Highly customizable and easy to use. Fits many screen resolutions from small mob
 
 Looking for Premium Templates?
 ------------------------------
-AdminLTE.io just opened a new premium templates page. Hand picked to insure the best quality and the most affordable
+AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
 prices. Visit https://adminlte.io/premium for more information.
 
 !["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
@@ -30,6 +30,8 @@ There are multiple ways to install AdminLTE.
 Download from [Github releases](https://github.com/ColorlibHQ/AdminLTE/releases).
 
 #### Using The Command Line:
+
+_Note: To install it via NPM/Yarn, you need at least Node.js 10 or higher._
 
 __Via NPM__
 ```bash
