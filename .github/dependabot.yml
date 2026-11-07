@@ -1,0 +1,61 @@
+# Dependabot: cotygodniowe PR-y z nowszymi wersjami zależności (minor i patch, jeden zbiorczy PR
+# na ekosystem) oraz poprawki bezpieczeństwa z alertów, też zebrane w jeden PR.
+# Wersje major są pominięte: to migracje, nie podbicia — robi się je ręcznie.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directories: ["/"]
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Warsaw
+    open-pull-requests-limit: 5
+    groups:
+      npm-minor-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      npm-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: composer
+    directories: ["/"]
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Warsaw
+    open-pull-requests-limit: 5
+    groups:
+      composer-minor-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      composer-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+
+  - package-ecosystem: bundler
+    directories: ["/docs"]
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Warsaw
+    open-pull-requests-limit: 5
+    groups:
+      bundler-minor-patch:
+        applies-to: version-updates
+        update-types: [minor, patch]
+      bundler-security:
+        applies-to: security-updates
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
